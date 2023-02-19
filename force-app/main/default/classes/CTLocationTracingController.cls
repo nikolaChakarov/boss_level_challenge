@@ -21,4 +21,10 @@ public with sharing class CTLocationTracingController {
         AND Person__r.Health_Status__c = :status
         AND Visit_Date__c = LAST_N_DAYS :10];
     }
+
+    public static List<Location_Tracing__c> checkDuplicates(List<Location_Tracing__c> locationTraces) {
+        List<Location_Tracing__c> currentLocations = [SELECT Id from Location_Tracing__c];
+
+        return null;
+    }
 }
